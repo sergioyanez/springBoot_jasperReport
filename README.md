@@ -1,3 +1,4 @@
 # springBoot_jasperReport
 
-Ejempl de la implementació0n de un mini proyecto utilizando spring boot + docker + jasperReport
+Ejemplo de la implementación de un mini proyecto utilizando spring boot + docker + jasperReport.
+Sólo con fines de aprender y ponerlo a disposición de quien lo necesite.
