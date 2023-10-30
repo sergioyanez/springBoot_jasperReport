@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteProductos" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e49135d7-f1af-49b3-8cfd-775b896f31de">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="integrador1"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT rubro,
+	nombre,
+	valor
+FROM integrador1.producto]]>
+	</queryString>
+	<field name="rubro" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="rubro"/>
+		<property name="com.jaspersoft.studio.field.label" value="rubro"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="producto"/>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="producto"/>
+	</field>
+	<field name="valor" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="valor"/>
+		<property name="com.jaspersoft.studio.field.label" value="valor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="producto"/>
+	</field>
+	<sortField name="rubro"/>
+	<group name="rubro">
+		<groupExpression><![CDATA[$F{rubro}]]></groupExpression>
+	</group>
+	<group name="GrupoRubro">
+		<groupExpression><![CDATA[ $F{rubro}]]></groupExpression>
+		<groupHeader>
+			<band height="50">
+				<textField>
+					<reportElement x="0" y="10" width="555" height="30" uuid="eb87b248-5497-48ee-8d1f-d3b7a58c1570"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="19" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{rubro}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="-20" y="0" width="595" height="79" forecolor="#EBEBEB" backcolor="#785AE6" uuid="30792f76-3ebb-4397-8135-f00d7848bff8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="35" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte de Productos]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="40" width="185" height="30" uuid="872c1dfb-d285-4606-a6a1-e23d02fe99a2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="19bcefd0-56cf-4b63-a461-099317aefcb6"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rubro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="40" width="185" height="30" uuid="ed8bce4a-78bb-41f5-8eef-011572d63f0f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="986c709c-b83a-41ed-8987-a928f354bfa5"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="40" width="185" height="30" uuid="8e8744a9-fe76-4c95-ba60-2fe298791f2d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6cbb530e-797d-449c-a482-71ce6e584d59"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Valor]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="50" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="185" height="30" uuid="6656f905-a83b-4659-8f9d-cf0df0bddef9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="19bcefd0-56cf-4b63-a461-099317aefcb6"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{rubro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="0" width="185" height="30" uuid="51f039f1-b99e-4571-9706-7cf971749b69">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="986c709c-b83a-41ed-8987-a928f354bfa5"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="185" height="30" uuid="7c3363a2-41d7-435b-a138-dd66a8ebe9e8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6cbb530e-797d-449c-a482-71ce6e584d59"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{valor}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
